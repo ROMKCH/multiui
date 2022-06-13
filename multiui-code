@@ -1,72 +1,179 @@
--- scriter#4863
--- Version 1.0
- 
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+	vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	wait(1)
+	vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "MultiUi";
+	Text = "Made by scipter#4863";
+	Duration = 5;
+})
+wait(1)
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Version:";
+	Text = "2.0";
+	Duration = 5;
+})
+
 -- Instances:
- 
-local Exploit = Instance.new("ScreenGui")
+
+local MainKeyScreenGui = Instance.new("ScreenGui")
+local keySys = Instance.new("Frame")
+local KeyLabel = Instance.new("TextLabel")
+local KeyBox = Instance.new("TextBox")
+local Submit = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local GetKey = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
 local MainFrame = Instance.new("Frame")
 local ButtonFrame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 local multiui = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local MainScriptsFrame = Instance.new("ScrollingFrame")
 local TpTool = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
 local Btools = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
 local PlayerFrame = Instance.new("ScrollingFrame")
 local Speed = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local Fly = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
-local jp = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
+local Fly = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local jp = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
 local CreditsFrame = Instance.new("ScrollingFrame")
 local madeby = Instance.new("TextLabel")
 local Discord = Instance.new("TextLabel")
 local MainScripts = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local Credits = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
-local Player = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
+local Other = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
- 
+local Player = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
+local Credits = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local OtherScriptsFrame = Instance.new("ScrollingFrame")
+local giantSurvival = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local luckyBlock = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local infinteYield = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+
 --Properties:
- 
-Exploit.Name = "Exploit"
-Exploit.Parent = game.CoreGui
-Exploit.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
- 
+
+MainKeyScreenGui.Name = "MainKeyScreenGui"
+MainKeyScreenGui.Parent = game.CoreGui
+MainKeyScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+keySys.Name = "keySys"
+keySys.Parent = MainKeyScreenGui
+keySys.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+keySys.BorderColor3 = Color3.fromRGB(45, 45, 45)
+keySys.Position = UDim2.new(0.348182887, 0, 0.140417457, 0)
+keySys.Size = UDim2.new(0, 271, 0, 311)
+
+KeyLabel.Name = "KeyLabel"
+KeyLabel.Parent = keySys
+KeyLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+KeyLabel.Size = UDim2.new(0, 271, 0, 50)
+KeyLabel.Font = Enum.Font.SourceSans
+KeyLabel.Text = "LOGIN"
+KeyLabel.TextColor3 = Color3.fromRGB(255, 236, 19)
+KeyLabel.TextScaled = true
+KeyLabel.TextSize = 14.000
+KeyLabel.TextWrapped = true
+
+KeyBox.Name = "KeyBox"
+KeyBox.Parent = keySys
+KeyBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.Position = UDim2.new(0.129151314, 0, 0.206611574, 0)
+KeyBox.Size = UDim2.new(0, 200, 0, 50)
+KeyBox.Font = Enum.Font.SourceSans
+KeyBox.PlaceholderColor3 = Color3.fromRGB(77, 77, 77)
+KeyBox.PlaceholderText = "ENTER KEY HERE"
+KeyBox.Text = ""
+KeyBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+KeyBox.TextSize = 14.000
+
+Submit.Name = "Submit"
+Submit.Parent = keySys
+Submit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Submit.Position = UDim2.new(0.1291513, 0, 0.46280995, 0)
+Submit.Size = UDim2.new(0, 200, 0, 50)
+Submit.Font = Enum.Font.SourceSans
+Submit.Text = "SUBMIT"
+Submit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Submit.TextScaled = true
+Submit.TextSize = 14.000
+Submit.TextWrapped = true
+Submit.MouseButton1Click:Connect(function()
+	if KeyBox.Text == "9we7tg8eoj3gy" then
+		keySys.Visible = false
+		wait(0.5)
+		MainFrame.Visible = true
+	end
+end)
+
+UICorner.Parent = Submit
+
+GetKey.Name = "GetKey"
+GetKey.Parent = keySys
+GetKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GetKey.Position = UDim2.new(0.1291513, 0, 0.760330617, 0)
+GetKey.Size = UDim2.new(0, 200, 0, 50)
+GetKey.Font = Enum.Font.SourceSans
+GetKey.Text = "GET KEY"
+GetKey.TextColor3 = Color3.fromRGB(0, 0, 0)
+GetKey.TextScaled = true
+GetKey.TextSize = 14.000
+GetKey.TextWrapped = true
+GetKey.MouseButton1Click:Connect(function()
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Copied!";
+		Text = "Link Successfully copied!";
+		Duration = 4;
+	})
+	wait(1)
+	setclipboard("https://link-center.net/461453/multiui-key")
+end)
+
+UICorner_2.Parent = GetKey
+
 MainFrame.Name = "MainFrame"
-MainFrame.Parent = Exploit
+MainFrame.Parent = MainKeyScreenGui
 MainFrame.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-MainFrame.Position = UDim2.new(0.38729015, 0, 0.136622399, 0)
+MainFrame.Position = UDim2.new(0.213784859, 0, 0.0910815969, 0)
 MainFrame.Size = UDim2.new(0, 487, 0, 339)
+MainFrame.Visible = false
 MainFrame.Active = true
 MainFrame.Draggable = true
- 
+
 ButtonFrame.Name = "ButtonFrame"
 ButtonFrame.Parent = MainFrame
 ButtonFrame.BackgroundColor3 = Color3.fromRGB(136, 136, 136)
 ButtonFrame.Position = UDim2.new(0, 0, 0.0710233599, 0)
 ButtonFrame.Size = UDim2.new(0, 92, 0, 314)
- 
+
 UICorner.Parent = ButtonFrame
- 
+
 multiui.Name = "multiui"
 multiui.Parent = MainFrame
 multiui.BackgroundColor3 = Color3.fromRGB(136, 136, 136)
 multiui.Size = UDim2.new(0, 487, 0, 34)
 multiui.Font = Enum.Font.SourceSans
-multiui.Text = "MultiUi V1.0"
+multiui.Text = "MultiUi"
 multiui.TextColor3 = Color3.fromRGB(0, 0, 0)
 multiui.TextScaled = true
 multiui.TextSize = 14.000
 multiui.TextWrapped = true
- 
+
 UICorner_2.Parent = multiui
- 
+
 MainScriptsFrame.Name = "MainScriptsFrame"
 MainScriptsFrame.Parent = MainFrame
 MainScriptsFrame.Active = true
@@ -75,7 +182,7 @@ MainScriptsFrame.BorderColor3 = Color3.fromRGB(163, 163, 163)
 MainScriptsFrame.Position = UDim2.new(0.188911706, 0, 0.100294985, 0)
 MainScriptsFrame.Size = UDim2.new(0, 383, 0, 290)
 MainScriptsFrame.Visible = false
- 
+
 TpTool.Name = "Tp Tool"
 TpTool.Parent = MainScriptsFrame
 TpTool.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
@@ -99,9 +206,9 @@ TpTool.MouseButton1Down:Connect(function()
 	end)
 	tool.Parent = game.Players.LocalPlayer.Backpack
 end)
- 
+
 UICorner_3.Parent = TpTool
- 
+
 Btools.Name = "Btools"
 Btools.Parent = MainScriptsFrame
 Btools.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
@@ -114,34 +221,35 @@ Btools.TextScaled = true
 Btools.TextSize = 14.000
 Btools.TextWrapped = true
 Btools.MouseButton1Down:Connect(function()
-	print("Getting Btools") --This is a normal script >_>
-	wait(2)
+	print("Getting Btools")
+	wait(1)
 	print("Drag Success")
 	a = Instance.new("HopperBin") 
 	a.BinType = 1 
 	a.Parent = game.Players.LocalPlayer.Backpack 
-	wait(3)
+	wait(1)
 	print("Delete Success")
 	a = Instance.new("HopperBin") 
 	a.BinType = 4 
 	a.Parent = game.Players.LocalPlayer.Backpack
-	wait(3)
+	wait(1)
 	print("Copy Success")
 	a = Instance.new("HopperBin") 
 	a.BinType = 3 
 	a.Parent = game.Players.LocalPlayer.Backpack 
 end)
- 
+
 UICorner_4.Parent = Btools
- 
+
 PlayerFrame.Name = "PlayerFrame"
 PlayerFrame.Parent = MainFrame
 PlayerFrame.Active = true
 PlayerFrame.BackgroundColor3 = Color3.fromRGB(163, 163, 163)
 PlayerFrame.BorderColor3 = Color3.fromRGB(163, 163, 163)
 PlayerFrame.Position = UDim2.new(0.188911706, 0, 0.100294985, 0)
-PlayerFrame.Size = UDim2.new(0, 383, 0, 290)
- 
+PlayerFrame.Size = UDim2.new(0, 395, 0, 304)
+PlayerFrame.Visible = false
+
 Speed.Name = "Speed"
 Speed.Parent = PlayerFrame
 Speed.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
@@ -161,9 +269,9 @@ Speed.MouseButton1Down:Connect(function()
 	end)
 	Humanoid.WalkSpeed = _G.WS;
 end)
- 
+
 UICorner_5.Parent = Speed
- 
+
 Fly.Name = "Fly"
 Fly.Parent = PlayerFrame
 Fly.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
@@ -188,7 +296,7 @@ Fly.MouseButton1Down:Connect(function()
 	local lastctrl = {f = 0, b = 0, l = 0, r = 0}
 	local maxspeed = 50
 	local speed = 0
- 
+
 	function Fly()
 		local bg = Instance.new("BodyGyro", HumanoidRootPart)
 		bg.P = 9e4
@@ -257,9 +365,9 @@ Fly.MouseButton1Down:Connect(function()
 	end)
 	Fly()
 end)
- 
+
 UICorner_6.Parent = Fly
- 
+
 jp.Name = "jp"
 jp.Parent = PlayerFrame
 jp.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
@@ -272,11 +380,16 @@ jp.TextScaled = true
 jp.TextSize = 14.000
 jp.TextWrapped = true
 jp.MouseButton1Down:Connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+	_G.WS = "150";
+	local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+	Humanoid:GetPropertyChangedSignal("JumpHeight"):Connect(function()
+		Humanoid.JumpHeight = _G.WS;
+	end)
+	Humanoid.JumpHeight = _G.WS;
 end)
- 
+
 UICorner_7.Parent = jp
- 
+
 CreditsFrame.Name = "CreditsFrame"
 CreditsFrame.Parent = MainFrame
 CreditsFrame.Active = true
@@ -285,7 +398,7 @@ CreditsFrame.BorderColor3 = Color3.fromRGB(163, 163, 163)
 CreditsFrame.Position = UDim2.new(0.188911706, 0, 0.100294985, 0)
 CreditsFrame.Size = UDim2.new(0, 383, 0, 290)
 CreditsFrame.Visible = false
- 
+
 madeby.Name = "madeby"
 madeby.Parent = CreditsFrame
 madeby.BackgroundColor3 = Color3.fromRGB(233, 233, 233)
@@ -298,7 +411,7 @@ madeby.TextColor3 = Color3.fromRGB(0, 0, 0)
 madeby.TextScaled = true
 madeby.TextSize = 14.000
 madeby.TextWrapped = true
- 
+
 Discord.Name = "Discord"
 Discord.Parent = CreditsFrame
 Discord.BackgroundColor3 = Color3.fromRGB(233, 233, 233)
@@ -311,7 +424,7 @@ Discord.TextColor3 = Color3.fromRGB(0, 0, 0)
 Discord.TextScaled = true
 Discord.TextSize = 14.000
 Discord.TextWrapped = true
- 
+
 MainScripts.Name = "MainScripts"
 MainScripts.Parent = MainFrame
 MainScripts.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
@@ -324,24 +437,24 @@ MainScripts.TextColor3 = Color3.fromRGB(255, 255, 0)
 MainScripts.TextScaled = true
 MainScripts.TextSize = 14.000
 MainScripts.TextWrapped = true
- 
+
 UICorner_8.Parent = MainScripts
- 
-Credits.Name = "Credits"
-Credits.Parent = MainFrame
-Credits.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-Credits.BorderColor3 = Color3.fromRGB(255, 0, 0)
-Credits.Position = UDim2.new(0, 0, 0.463202894, 0)
-Credits.Size = UDim2.new(0, 92, 0, 37)
-Credits.Font = Enum.Font.SourceSans
-Credits.Text = "Credits"
-Credits.TextColor3 = Color3.fromRGB(255, 255, 0)
-Credits.TextScaled = true
-Credits.TextSize = 14.000
-Credits.TextWrapped = true
- 
-UICorner_9.Parent = Credits
- 
+
+Other.Name = "Other"
+Other.Parent = MainFrame
+Other.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Other.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Other.Position = UDim2.new(0, 0, 0.463202894, 0)
+Other.Size = UDim2.new(0, 92, 0, 37)
+Other.Font = Enum.Font.SourceSans
+Other.Text = "Other"
+Other.TextColor3 = Color3.fromRGB(255, 255, 0)
+Other.TextScaled = true
+Other.TextSize = 14.000
+Other.TextWrapped = true
+
+UICorner_9.Parent = Other
+
 Player.Name = "Player"
 Player.Parent = MainFrame
 Player.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
@@ -354,43 +467,132 @@ Player.TextColor3 = Color3.fromRGB(255, 255, 0)
 Player.TextScaled = true
 Player.TextSize = 14.000
 Player.TextWrapped = true
- 
+
 UICorner_10.Parent = Player
- 
+
 UICorner_11.Parent = MainFrame
- 
+
+Credits.Name = "Credits"
+Credits.Parent = MainFrame
+Credits.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Credits.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Credits.Position = UDim2.new(0, 0, 0.887981653, 0)
+Credits.Size = UDim2.new(0, 92, 0, 37)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+UICorner_12.Parent = Credits
+
+OtherScriptsFrame.Name = "OtherScriptsFrame"
+OtherScriptsFrame.Parent = MainFrame
+OtherScriptsFrame.Active = true
+OtherScriptsFrame.BackgroundColor3 = Color3.fromRGB(163, 163, 163)
+OtherScriptsFrame.BorderColor3 = Color3.fromRGB(163, 163, 163)
+OtherScriptsFrame.Position = UDim2.new(0.188911706, 0, 0.100294985, 0)
+OtherScriptsFrame.Size = UDim2.new(0, 383, 0, 290)
+
+giantSurvival.Name = "giantSurvival"
+giantSurvival.Parent = OtherScriptsFrame
+giantSurvival.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
+giantSurvival.Position = UDim2.new(0.0156657957, 0, 0.0197538417, 0)
+giantSurvival.Size = UDim2.new(0, 358, 0, 50)
+giantSurvival.Font = Enum.Font.SourceSans
+giantSurvival.Text = "Giant Survival"
+giantSurvival.TextColor3 = Color3.fromRGB(0, 0, 0)
+giantSurvival.TextScaled = true
+giantSurvival.TextSize = 14.000
+giantSurvival.TextWrapped = true
+giantSurvival.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ROMKCH/giant-survival/main/giant-survival.lua"))()
+end)
+
+UICorner_13.Parent = giantSurvival
+
+luckyBlock.Name = "luckyBlock"
+luckyBlock.Parent = OtherScriptsFrame
+luckyBlock.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
+luckyBlock.Position = UDim2.new(0.0156657957, 0, 0.118573904, 0)
+luckyBlock.Size = UDim2.new(0, 358, 0, 50)
+luckyBlock.Font = Enum.Font.SourceSans
+luckyBlock.Text = "Lucky Blocks"
+luckyBlock.TextColor3 = Color3.fromRGB(0, 0, 0)
+luckyBlock.TextScaled = true
+luckyBlock.TextSize = 14.000
+luckyBlock.TextWrapped = true
+luckyBlock.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ROMKCH/lucky-block/main/lucky%20block%20battlegrounds"))()
+end)
+
+UICorner_14.Parent = luckyBlock
+
+infinteYield.Name = "infinteYield"
+infinteYield.Parent = OtherScriptsFrame
+infinteYield.BackgroundColor3 = Color3.fromRGB(223, 223, 223)
+infinteYield.Position = UDim2.new(0.0156657957, 0, 0.217393965, 0)
+infinteYield.Size = UDim2.new(0, 358, 0, 50)
+infinteYield.Font = Enum.Font.SourceSans
+infinteYield.Text = "Infinite Yield"
+infinteYield.TextColor3 = Color3.fromRGB(0, 0, 0)
+infinteYield.TextScaled = true
+infinteYield.TextSize = 14.000
+infinteYield.TextWrapped = true
+infinteYield.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+UICorner_15.Parent = infinteYield
+
 -- Scripts:
- 
-local function QLYSUJW_fake_script() -- MainScripts.LocalScript 
+
+local function KHLWABV_fake_script() -- MainScripts.LocalScript 
 	local script = Instance.new('LocalScript', MainScripts)
- 
+
 	script.Parent.MouseButton1Click:connect(function()
 		script.Parent.Parent.MainScriptsFrame.Visible = true
 		script.Parent.Parent.PlayerFrame.Visible = false
 		script.Parent.Parent.CreditsFrame.Visible = false
+		script.Parent.Parent.OtherScriptsFrame.Visible = false
 		wait(0.1)
 	end)
 end
-coroutine.wrap(QLYSUJW_fake_script)()
-local function PSBG_fake_script() -- Credits.LocalScript 
-	local script = Instance.new('LocalScript', Credits)
- 
+coroutine.wrap(KHLWABV_fake_script)()
+local function NGJQA_fake_script() -- Other.LocalScript 
+	local script = Instance.new('LocalScript', Other)
+
 	script.Parent.MouseButton1Click:connect(function()
 		script.Parent.Parent.MainScriptsFrame.Visible = false
 		script.Parent.Parent.PlayerFrame.Visible = false
-		script.Parent.Parent.CreditsFrame.Visible = true
+		script.Parent.Parent.CreditsFrame.Visible = false
+		script.Parent.Parent.OtherScriptsFrame.Visible = true
 		wait(0.1)
 	end)
 end
-coroutine.wrap(PSBG_fake_script)()
-local function PTTOAJ_fake_script() -- Player.LocalScript 
+coroutine.wrap(NGJQA_fake_script)()
+local function VCMRSK_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
- 
+
 	script.Parent.MouseButton1Click:connect(function()
 		script.Parent.Parent.MainScriptsFrame.Visible = false
 		script.Parent.Parent.PlayerFrame.Visible = true
 		script.Parent.Parent.CreditsFrame.Visible = false
+		script.Parent.Parent.OtherScriptsFrame.Visible = false
 		wait(0.1)
 	end)
 end
-coroutine.wrap(PTTOAJ_fake_script)()
+coroutine.wrap(VCMRSK_fake_script)()
+local function MJMU_fake_script() -- Credits.LocalScript 
+	local script = Instance.new('LocalScript', Credits)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.MainScriptsFrame.Visible = false
+		script.Parent.Parent.PlayerFrame.Visible = false
+		script.Parent.Parent.CreditsFrame.Visible = true
+		script.Parent.Parent.OtherScriptsFrame.Visible = false
+		wait(0.1)
+	end)
+end
+coroutine.wrap(MJMU_fake_script)()
